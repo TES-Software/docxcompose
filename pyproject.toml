@@ -9,8 +9,11 @@ description = "Python library for concatenating/appending Microsoft Word (.docx)
 readme = "README.rst"
 license = {text = "MIT"}
 dependencies = []
-dynamic = ["version", "keywords", "classifiers"]
 
+# Only version is dynamic
+dynamic = ["version"]
+
+# All other fields remain static
 keywords = ["Python", "DOCX", "Word", "OOXML"]
 classifiers = [
     "Programming Language :: Python",
