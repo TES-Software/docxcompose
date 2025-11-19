@@ -1,54 +1,39 @@
 [build-system]
-requires = ["setuptools>=68", "wheel"]
+requires = ["setuptools>=61.0", "wheel", "setuptools_scm"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "docxcompose"
-version = "1.4.1.post0+emmv"         # PEP 440-valid
-description = "Compose .docx documents"
-requires-python = ">=3.8"
-license = { text = "MIT License" }
+version = "1.4.1.post0+tes"         # PEP 440-valid
+description = "Python library for concatenating/appending Microsoft Word (.docx) files."
+readme = "README.rst"
+license = {text = "MIT"}
+dependencies = []
+requires-python = ">=3.13"
 
-authors = [
-  { name = "Thomas Buchberger", email = "t.buchberger@4teamwork.ch" },
-]
-maintainers = [
-  { name = "Emmanuel Viennet" }
-]
 
+# Only version is dynamic
+dynamic = ["version"]
+
+# All other fields remain static
 keywords = ["Python", "DOCX", "Word", "OOXML"]
-
 classifiers = [
-  "License :: OSI Approved :: MIT License",
-  "Operating System :: OS Independent",
-  "Programming Language :: Python",
-  "Programming Language :: Python :: 3",
-  "Programming Language :: Python :: 3 :: Only",
-  "Programming Language :: Python :: 3.8",
-  "Programming Language :: Python :: 3.9",
-  "Programming Language :: Python :: 3.10",
-  "Programming Language :: Python :: 3.11",
-  "Programming Language :: Python :: 3.12",
-  "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: MIT License"
 ]
-
-dependencies = [
-  "lxml",
-  "python-docx>=0.8.8",
-  "six",
-  "Babel",                         # (same as 'babel'; keep if upstream uses it)
-]
-
-[project.optional-dependencies]
-test = ["pytest"]
 
 [project.scripts]
 docxcompose = "docxcompose.command:main"
 
-[project.urls]
-Homepage = "https://github.com/emmanuelito/docxcompose"
-Repository = "https://github.com/emmanuelito/docxcompose"
+[project.optional-dependencies]
+test = ["pytest"]
+tests = ["pytest"]
 
+[tool.setuptools_scm]
+version_scheme = "guess-next-dev"
+local_scheme = "node-and-date"
 
 # declare readme dynamically via setuptools
 [tool.setuptools.dynamic]

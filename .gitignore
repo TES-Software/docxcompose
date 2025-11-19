@@ -11,3 +11,5 @@ pip-selfcheck.json
 .tox
 
 /.cache/
+dist/
+.idea/
