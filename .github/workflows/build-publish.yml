@@ -5,8 +5,6 @@ on:
   push:
     tags:
       - "v*"   # Runs only when you push a tag like v1.0.0
-    branches:
-      - kj-tools-1384-tests
 
 jobs:
   build-and-publish:
