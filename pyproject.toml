@@ -3,13 +3,17 @@ requires = ["setuptools>=61.0", "wheel", "setuptools_scm"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "docxcompose"
-version = "1.4.1.post0+tes"         # PEP 440-valid
+name = "docxcompose_tes"
 description = "Python library for concatenating/appending Microsoft Word (.docx) files."
 readme = "README.rst"
 license = {text = "MIT"}
-dependencies = []
 requires-python = ">=3.13"
+dependencies = [
+    'lxml',
+    'python-docx >= 0.8.8',
+    'six',
+    'babel',
+]
 
 
 # Only version is dynamic
